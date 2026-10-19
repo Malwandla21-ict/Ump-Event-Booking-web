@@ -1,0 +1,13 @@
+# Lets the project live directly in XAMPP's htdocs (http://localhost/eventBookingWeb/)
+# while keeping app code, config and .env outside the web root.
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Belt and braces: never serve these even if rewriting is off
+<FilesMatch "^\.env|\.(sql|log|md|lock)$">
+    Require all denied
+</FilesMatch>

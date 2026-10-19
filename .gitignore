@@ -1,0 +1,16 @@
+# Environment & secrets
+.env
+
+# Runtime files
+/storage/logs/*
+!/storage/logs/.gitkeep
+/public/uploads/events/*
+!/public/uploads/events/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+.claude/
+*.iml
+.DS_Store
+Thumbs.db
